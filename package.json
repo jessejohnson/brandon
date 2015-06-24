@@ -1,0 +1,25 @@
+{
+  "name": "brandon",
+  "version": "0.0.1",
+  "description": "A CSS Framework for the First Men",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "css",
+    "bootstrap",
+    "grid",
+    "Bran",
+    "Stark",
+    "Bran",
+    "the",
+    "Builder"
+  ],
+  "author": "jesse johnson",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-less": "^3.0.3"
+  }
+}
