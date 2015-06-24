@@ -36,5 +36,5 @@ gulp.task('css-concat', function(){
 
 //gulp-watch
 gulp.task('watcher', function(){
-	gulp.watch([ALL_LESS, ALL_CSS], ['less', 'css-concat']);
+	gulp.watch([ALL_LESS, ALL_CSS, 'gulpfile.js'], ['less', 'css-concat']);
 });

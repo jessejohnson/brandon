@@ -1,0 +1,234 @@
+/* html5reset.css - 01/11/2011 */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    line-height: 1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+	display: block;
+}
+
+nav ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color: #ff9;
+    color: #000; 
+    font-style: italic;
+    font-weight: bold;
+}
+
+del {
+    text-decoration:  line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display: block;
+    height: 1px;
+    border: 0;   
+    border-top: 1px solid #cccccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+input, select {
+    vertical-align: middle;
+}
+/*
+grid.css
+*/
+/*  GRID OF TWELVE   ============================================================================= */
+
+.span12 {
+	width: 100%;
+}
+
+.span11 {
+	width: 91.53%;
+}
+
+.span10 {
+	width: 83.06%;
+}
+
+.span9 {
+	width: 74.6%;
+}
+
+.span8 {
+	width: 66.13%;
+}
+
+.span7 {
+	width: 57.66%; 
+}
+
+.span6 {
+	width: 49.2%; 
+}
+
+.span5 {
+	width: 40.73%; 
+}
+
+.span4 {
+	width: 32.26%; 
+}
+
+.span3 {
+	width: 23.8%;
+}
+
+.span2 {
+	width: 15.33%; 
+}
+
+.span1 {
+	width: 6.86%; 
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span12 {
+		width: 100%; 
+	}
+	.span11 {
+		width: 100%; 
+	}
+	.span10 {
+		width: 100%; 
+	}
+	.span9 {
+		width: 100%; 
+	}
+	.span8 {
+		width: 100%; 
+	}
+	.span7 {
+		width: 100%; 
+	}
+	.span6 {
+		width: 100%; 
+	}
+	.span5 {
+		width: 100%; 
+	}
+	.span4 {
+		width: 100%; 
+	}
+	.span3 {
+		width: 100%; 
+	}
+	.span2 {
+		width: 100%; 
+	}
+	.span1 {
+		width: 100%; 
+	}
+}
+/*
+*col.css
+*/
+/*  SECTIONS  ============================================================================= */
+
+.row {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  GROUPING  ============================================================================= */
+
+
+.group:before,
+.group:after {
+    content:"";
+    display:table;
+}
+.group:after {
+    clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+/*  GRID COLUMN SETUP   ==================================================================== */
+
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+
+.col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
+
+
+/*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.col { 
+		margin: 1% 0 1% 0%;
+	}
+}
