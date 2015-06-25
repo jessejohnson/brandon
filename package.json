@@ -4,7 +4,12 @@
   "description": "A CSS Framework for the First Men",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "python -m SimpleHTTPServer",
+    "build:less": "lessc src/less/main.less build/css/main.css",
+    "build:css": "cat src/css/html5reset.css build/css/main.css >> dist/css/brandon.css",
+    "build": "npm run build:less && npm run build:css",
+    "dev": "watch 'npm run build' src/"
   },
   "keywords": [
     "css",
@@ -19,8 +24,7 @@
   "author": "jesse johnson",
   "license": "MIT",
   "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-concat": "^2.6.0",
-    "gulp-less": "^3.0.3"
+    "less": "^2.5.1",
+    "watch": "^0.16.0"
   }
 }
