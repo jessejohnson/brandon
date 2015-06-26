@@ -93,7 +93,8 @@ hr {
 
 input, select {
     vertical-align: middle;
-}/*generate columns for 12 column grid*/
+}/*entry point less should import all other less files*/
+/*generate columns for 12 column grid*/
 /*dimension variables*/
 *,
 *:after,
@@ -123,8 +124,8 @@ input, select {
   clear: both;
 }
 .container {
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 5%;
+  margin-right: 5%;
   padding: 10px;
 }
 /* Main Widths */
@@ -165,178 +166,21 @@ input, select {
   width: 100%;
 }
 /* responsive media queries*/
-div {
-  padding: 5px;
-  margin: 10px;
+/*base tablet to small desktop styles*/
+/*base tablet styles*/
+@media (max-width: 800px) {
+  [class*='span-'] {
+    width: 100%;
+  }
 }
-/* html5reset.css - 01/11/2011 */
-
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
-}
-
-body {
-    line-height: 1;
-}
-
-article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section { 
-	display: block;
-}
-
-nav ul {
-    list-style: none;
-}
-
-blockquote, q {
-    quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
-}
-
-a {
-    margin: 0;
-    padding: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
-}
-
-/* change colours to suit your needs */
-ins {
-    background-color: #ff9;
-    color: #000;
-    text-decoration: none;
-}
-
-/* change colours to suit your needs */
-mark {
-    background-color: #ff9;
-    color: #000; 
-    font-style: italic;
-    font-weight: bold;
-}
-
-del {
-    text-decoration:  line-through;
-}
-
-abbr[title], dfn[title] {
-    border-bottom: 1px dotted;
-    cursor: help;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-/* change border colour to suit your needs */
-hr {
-    display: block;
-    height: 1px;
-    border: 0;   
-    border-top: 1px solid #cccccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
-input, select {
-    vertical-align: middle;
-}/*generate columns for 12 column grid*/
-/*dimension variables*/
-*,
-*:after,
-*:before {
-  margin: 0;
-  padding: 0;
-  /* Removes padding behaviour on widths */
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-/* Attribute selector */
-[class*='span-'] {
-  float: left;
-  padding: 10px;
-}
-[class*='span-'] :last-of-type {
-  float: right;
-}
-/* row with clearfix hack*/
-.row {
-  padding: 10px;
-}
-.row :after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.container {
-  margin-left: 50px;
-  margin-right: 50px;
-  padding: 10px;
-}
-/* Main Widths */
-.span-1 {
-  width: 8.33333333%;
-}
-.span-2 {
-  width: 16.66666667%;
-}
-.span-3 {
-  width: 25%;
-}
-.span-4 {
-  width: 33.33333333%;
-}
-.span-5 {
-  width: 41.66666667%;
-}
-.span-6 {
-  width: 50%;
-}
-.span-7 {
-  width: 58.33333333%;
-}
-.span-8 {
-  width: 66.66666667%;
-}
-.span-9 {
-  width: 75%;
-}
-.span-10 {
-  width: 83.33333333%;
-}
-.span-11 {
-  width: 91.66666667%;
-}
-.span-12 {
-  width: 100%;
-}
-/* responsive media queries*/
-div {
-  padding: 5px;
-  margin: 10px;
+/*base mobile styles - everything 100%*/
+/*
+development helper contains classes to help in debugging dev
+it is not meant to be a core part of the framework
+*/
+.tile {
+  min-height: 100px;
+  border-style: dotted;
+  border-width: 1px;
+  border-color: #2b6560;
 }

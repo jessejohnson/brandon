@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "python -m SimpleHTTPServer",
     "build:less": "lessc src/less/main.less build/css/main.css",
-    "build:css": "cat src/css/html5reset.css build/css/main.css >> dist/css/brandon.css",
+    "build:css": "cat src/css/html5reset.css build/css/main.css > dist/css/brandon.css",
     "build": "npm run build:less && npm run build:css",
     "dev": "watch 'npm run build' src/"
   },

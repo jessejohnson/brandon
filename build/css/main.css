@@ -1,3 +1,4 @@
+/*entry point less should import all other less files*/
 /*generate columns for 12 column grid*/
 /*dimension variables*/
 *,
@@ -28,8 +29,8 @@
   clear: both;
 }
 .container {
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 5%;
+  margin-right: 5%;
   padding: 10px;
 }
 /* Main Widths */
@@ -70,7 +71,21 @@
   width: 100%;
 }
 /* responsive media queries*/
-div {
-  padding: 5px;
-  margin: 10px;
+/*base tablet to small desktop styles*/
+/*base tablet styles*/
+@media (max-width: 800px) {
+  [class*='span-'] {
+    width: 100%;
+  }
+}
+/*base mobile styles - everything 100%*/
+/*
+development helper contains classes to help in debugging dev
+it is not meant to be a core part of the framework
+*/
+.tile {
+  min-height: 100px;
+  border-style: dotted;
+  border-width: 1px;
+  border-color: #2b6560;
 }

@@ -8,7 +8,9 @@
 
 /*dimension variables*/
 @padding-default: 10px;
-@margin-container: 50px;
+@margin-container: 0.05;
+@width-max-phone: 480px;
+@width-max-tablet: 800px;
 
 
 *,
@@ -35,7 +37,6 @@
 /* row with clearfix hack*/
 .row{
 	padding: @padding-default;
-
 	:after {
 	  content: "";
 	  display: table;
@@ -44,8 +45,8 @@
 }
 
 .container {
-  margin-left: @margin-container;
-  margin-right: @margin-container;
+  margin-left: percentage(@margin-container);
+  margin-right: percentage(@margin-container);
   padding: @padding-default;
 }
 
@@ -53,3 +54,18 @@
 .generate-columns(12);
 
 /* responsive media queries*/
+/*base tablet to small desktop styles*/
+@media (min-width: 800px) and (max-width: 1100px){
+
+}
+
+/*base tablet styles*/
+@media (max-width: @width-max-tablet){
+  [class*='span-']{
+    width: 100%;
+  }
+}
+
+/*base mobile styles - everything 100%*/
+@media (max-width: @width-max-phone){
+}
