@@ -1,0 +1,33 @@
+/* font face imports*/
+@font-face{
+	font-family: 'RobotoRegular';
+	src: url('../assets/fonts/RobotoTTF/Roboto-Regular.ttf');
+}
+
+@font-face{
+	font-family: 'RobotoThin';
+	src: url('../assets/fonts/RobotoTTF/Roboto-Thin.ttf');
+}
+
+/*font size definitions*/
+@font-size-body-default: 14px;
+@line-height-body-default: 1.5;
+@font-size-h1-default: 36px;
+@font-size-h2-default: 30px;
+@font-size-h3-default: 24px;
+@font-size-h4-default: 18px;
+
+.thin{
+	font-family: RobotoThin;
+}
+
+body{
+	font-family: RobotoRegular;
+	font-size: @font-size-body-default;
+	line-height: @line-height-body-default;
+}
+
+h1{
+	font-size: @font-size-h1-default;
+	.thin;
+}

@@ -20,10 +20,10 @@
   padding: 0;
   /* Removes padding behaviour on widths */
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
- 
+
 /* Attribute selector */
 [class*='span-'] {
   float: left;
@@ -33,21 +33,29 @@
   	float: right;
   }
 }
- 
+
 /* row with clearfix hack*/
 .row{
 	padding: @padding-default;
 	:after {
-	  content: "";
-	  display: table;
-	  clear: both;
-	}
+   content: "";
+   display: table;
+   clear: both;
+ }
 }
 
+/* set meaningful left right margins*/
 .container {
   margin-left: percentage(@margin-container);
   margin-right: percentage(@margin-container);
   padding: @padding-default;
+}
+
+.container-bounded {
+  margin-top: percentage(@margin-container);
+  margin-bottom: percentage(@margin-container);
+
+  .container
 }
 
 /* Main Widths */

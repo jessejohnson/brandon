@@ -28,7 +28,15 @@
   display: table;
   clear: both;
 }
+/* set meaningful left right margins*/
 .container {
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 10px;
+}
+.container-bounded {
+  margin-top: 5%;
+  margin-bottom: 5%;
   margin-left: 5%;
   margin-right: 5%;
   padding: 10px;
@@ -88,4 +96,26 @@ it is not meant to be a core part of the framework
   border-style: dotted;
   border-width: 1px;
   border-color: #2b6560;
+}
+/* font face imports*/
+@font-face {
+  font-family: 'RobotoRegular';
+  src: url('../assets/fonts/RobotoTTF/Roboto-Regular.ttf');
+}
+@font-face {
+  font-family: 'RobotoThin';
+  src: url('../assets/fonts/RobotoTTF/Roboto-Thin.ttf');
+}
+/*font size definitions*/
+.thin {
+  font-family: RobotoThin;
+}
+body {
+  font-family: RobotoRegular;
+  font-size: 14px;
+  line-height: 1.5;
+}
+h1 {
+  font-size: 36px;
+  font-family: RobotoThin;
 }
