@@ -1,12 +1,22 @@
 /* font face imports*/
 @font-face{
-	font-family: 'RobotoRegular';
-	src: url('../assets/fonts/RobotoTTF/Roboto-Regular.ttf');
+	font-family: 'Regular';
+	src: url('../assets/fonts/raleway/Raleway-Regular.ttf');
 }
 
 @font-face{
-	font-family: 'RobotoThin';
-	src: url('../assets/fonts/RobotoTTF/Roboto-Thin.ttf');
+	font-family: 'Thin';
+	src: url('../assets/fonts/raleway/Raleway-Thin.ttf');
+}
+
+@font-face{
+	font-family: 'Light';
+	src: url('../assets/fonts/raleway/Raleway-Light.ttf');
+}
+
+@font-face{
+	font-family: 'Bold';
+	src: url('../assets/fonts/raleway/Raleway-SemiBold.ttf');
 }
 
 /*font size definitions*/
@@ -17,17 +27,38 @@
 @font-size-h3-default: 24px;
 @font-size-h4-default: 18px;
 
+@colour-text-default: #333;
+
 .thin{
-	font-family: RobotoThin;
+	font-family: Thin;
+}
+
+.font-smoothing {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body{
-	font-family: RobotoRegular;
+	font-family: Regular;
 	font-size: @font-size-body-default;
 	line-height: @line-height-body-default;
+	color: @colour-text-default;
+	// .font-smoothing;
 }
 
 h1{
 	font-size: @font-size-h1-default;
+	.thin;
+}
+h2{
+	font-size: @font-size-h2-default;
+	.thin;
+}
+h3{
+	font-size: @font-size-h3-default;
+	.thin;
+}
+h4{
+	font-size: @font-size-h4-default;
 	.thin;
 }

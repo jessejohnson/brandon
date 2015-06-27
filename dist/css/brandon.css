@@ -117,6 +117,7 @@ input, select {
 /* row with clearfix hack*/
 .row {
   padding: 10px;
+  overflow: hidden;
 }
 .row :after {
   content: "";
@@ -187,30 +188,104 @@ development helper contains classes to help in debugging dev
 it is not meant to be a core part of the framework
 */
 .tile {
-  min-height: 100px;
+  min-height: 50px;
   border-style: dotted;
   border-width: 1px;
   border-color: #2b6560;
 }
 /* font face imports*/
 @font-face {
-  font-family: 'RobotoRegular';
-  src: url('../assets/fonts/RobotoTTF/Roboto-Regular.ttf');
+  font-family: 'Regular';
+  src: url('../assets/fonts/raleway/Raleway-Regular.ttf');
 }
 @font-face {
-  font-family: 'RobotoThin';
-  src: url('../assets/fonts/RobotoTTF/Roboto-Thin.ttf');
+  font-family: 'Thin';
+  src: url('../assets/fonts/raleway/Raleway-Thin.ttf');
+}
+@font-face {
+  font-family: 'Light';
+  src: url('../assets/fonts/raleway/Raleway-Light.ttf');
+}
+@font-face {
+  font-family: 'Bold';
+  src: url('../assets/fonts/raleway/Raleway-SemiBold.ttf');
 }
 /*font size definitions*/
 .thin {
-  font-family: RobotoThin;
+  font-family: Thin;
+}
+.font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 body {
-  font-family: RobotoRegular;
+  font-family: Regular;
   font-size: 14px;
   line-height: 1.5;
+  color: #333333;
 }
 h1 {
   font-size: 36px;
-  font-family: RobotoThin;
+  font-family: Thin;
+}
+h2 {
+  font-size: 30px;
+  font-family: Thin;
+}
+h3 {
+  font-size: 24px;
+  font-family: Thin;
+}
+h4 {
+  font-size: 18px;
+  font-family: Thin;
+}
+/*define dimensions for nav*/
+.hide-when-small {
+  visibility: visible;
+}
+@media (max-width: 800px) {
+  .hide-when-small {
+    visibility: hidden;
+  }
+}
+.show-when-large {
+  visibility: hidden;
+}
+@media (min-width: 800px) {
+  .show-when-large {
+    visibility: visible;
+  }
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+nav {
+  width: 100%;
+  min-height: 70px;
+  padding: 10px;
+  overflow: hidden;
+}
+nav :after {
+  content: "";
+  display: table;
+  clear: both;
+}
+nav ul {
+  width: 100%;
+}
+nav ul li {
+  padding: 10px;
+  /*by default, nav links are displayed from the left
+			add .right to shift nav links to the right of screen
+			*/
+  float: left;
+}
+nav ul li a {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
 }

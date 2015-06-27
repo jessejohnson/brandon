@@ -1,0 +1,53 @@
+/*define dimensions for nav*/
+@width-nav-default: 100%;
+@height-nav-default: 70px;
+
+// .collapse{
+// 	@media (max-width: @width-max-tablet){
+// 		float: none;
+// 	}
+// }
+.hide-when-small{
+	visibility: visible;
+	@media (max-width: @width-max-tablet){
+		visibility: hidden;
+	}
+}
+
+.show-when-large{
+	visibility: hidden;
+	@media (min-width: @width-max-tablet){
+		visibility: visible;
+	}
+}
+
+.left{
+	float: left;
+	// .collapse;
+}
+
+.right{
+	float: right;
+	// .collapse;
+}
+
+nav{
+	width: @width-nav-default;
+	min-height: @height-nav-default;
+	.row;
+	ul{
+		width: @width-nav-default;
+		li{
+			padding: @padding-default;
+			/*by default, nav links are displayed from the left
+			add .right to shift nav links to the right of screen
+			*/
+			.left;
+			a{
+				text-align: center;
+				text-decoration: none;
+				color: inherit;
+			}
+		}
+	}
+}
